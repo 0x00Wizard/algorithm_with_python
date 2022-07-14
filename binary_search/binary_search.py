@@ -26,3 +26,5 @@ def binary_search(data, item):
 
     # Else, if the item is not found in the list, return -1
     return -1
+
+
