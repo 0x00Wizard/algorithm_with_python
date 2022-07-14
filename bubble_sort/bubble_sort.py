@@ -17,7 +17,7 @@ def bubble_sort(lst):
             if lst[j] > lst[j + 1]:
                 # Swapping...
                 lst[j], lst[j + 1] = lst[j + 1], lst[j]
-                # A swap occured, update the variable
+                # A swap occurred, update the variable
                 swapped = True
 
         # If the inner loop did not cause any swaps,
