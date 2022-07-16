@@ -19,6 +19,7 @@ def bubble_sort(lst):
                 lst[j], lst[j + 1] = lst[j + 1], lst[j]
                 print(f"list {lst} \n")
                 print(f"Yes {lst[j]} > {lst[j + 1]} \n")
+
                 swapped = True
 
         if not swapped:

@@ -40,4 +40,4 @@ def bubble_sort(lst):
             break
 
 
-bubble_sort([3, 2, 1, 4, 6, 7, 9, 5])
+bubble_sort([6, 2, 3, 5, 1, 4, 9, 8])
