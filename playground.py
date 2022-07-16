@@ -1,21 +1,28 @@
-def binary_search(data, item):
-    print(data)
-    low = 0
-    high = len(data) - 1
+def bubble_sort(lst):
+    print(f"List {lst}")
+    n = len(lst)
+    print(f"Length of list {n}")
+    for i in range(n):
+        print("=" * 50)
+        print(f"index of the outer-loop {i} \n")
+        swapped = False
 
-    while low <= high:
-        middle = (low + high) // 2
+        for j in range(0, n - i - 1):
+            calculation = n - i - 1
+            print(f"{n} - {i} - 1 = {calculation}")
+            print(f"index of the inner loop {j} \n")
+            print(f"List {lst}")
+            print(f"first index {j} = {lst[j]} \n")
+            print(f"Second index {j + 1} = {lst[j + 1]} \n")
 
-        if data[middle] == item:
-            return middle
+            if lst[j] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+                print(f"list {lst} \n")
+                print(f"Yes {lst[j]} > {lst[j + 1]} \n")
+                swapped = True
 
-        elif data[middle] > item:
-            high = middle - 1
-
-        else:
-            low = middle + 1
-
-    return -1
+        if not swapped:
+            break
 
 
-print(binary_search([x for x in range(0, 500000, 2)], 56252))
+print(bubble_sort([6, 2, 3, 5, 1, 4, 9, 8]))

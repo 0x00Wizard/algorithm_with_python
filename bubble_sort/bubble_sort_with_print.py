@@ -38,3 +38,6 @@ def bubble_sort(lst):
             print("There was no need to swap! The list is now sorted")
             print(lst)
             break
+
+
+bubble_sort([3, 2, 1, 4, 6, 7, 9, 5])
