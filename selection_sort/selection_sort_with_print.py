@@ -11,7 +11,7 @@ def selection_sort(lst):
             print(f"Current element: {lst[curr_index]}")
             print(f"Min element so far: {lst[min_index]}")
 
-            if lst[curr_index] > lst[min_index]:
+            if lst[min_index] > lst[curr_index]:
                 answer = "yes"
                 print(f"Is the current element smaller than the min element? {answer}")
                 min_index = curr_index
