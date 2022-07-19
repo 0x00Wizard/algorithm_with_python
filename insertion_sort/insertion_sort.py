@@ -1,20 +1,15 @@
 def insertion_sort(lst):
-    print("=====================> Starting Insertion Sort")
+    # For every element in the list (except the first one).
     for i in range(1, len(lst)):
-        print(f"---> Outer loop. Iteration #{i}")
-        print(f"Sorted Portion: {lst[i - 1]}")
-        print(f"Unsorted portion: {lst[1:]}")
-        print(f"We need to find the correct spot for: {lst[i]}")
-        print(f"{lst[i]} is the first element in the unsorted portion")
-        print("Let's find where it belongs...")
+        # Select the first element in the unsorted portion of the list.
         elem_selected = lst[i]
 
+        # Check the elements in the unsorted portion
+        # and move them one index to the right if they
+        # are greater than the element selected.
         while i > 0 and elem_selected < lst[i - 1]:
-            print()
             lst[i] = lst[i - 1]
             i -= 1
 
+        # Insert the element where it belongs.
         lst[i] = elem_selected
-
-
-print(insertion_sort([6, 1, 8, 2, 6]))
