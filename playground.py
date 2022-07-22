@@ -1,9 +1,9 @@
-def selection_sort(lst):
+def insertion_sort(lst):
     for i in range(len(lst)):
-        min_index = i
+        elem_selected = lst[i]
 
-        for curr_index in range(i + 1, len(lst)):
-            if lst[min_index] > lst[curr_index]:
-                min_index = curr_index
+        while i > 0 and elem_selected < lst[i - 1]:
+            lst[i] = lst[i - 1]
+            i -= 1
 
-        lst[i], lst[min_index] = lst[min_index], lst[i]
+        lst[i] = elem_selected
