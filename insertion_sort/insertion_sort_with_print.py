@@ -46,3 +46,6 @@ def insertion_sort(lst):
         print("The list is now:", lst)
 
     print("The list is now sorted!")
+
+
+insertion_sort([1, 6, 8, 2, 6])
