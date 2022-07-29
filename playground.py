@@ -9,13 +9,10 @@ def merge(left_half, right_half):
         if left_half[i] < right_half[j]:
             result.append(left_half[i])
             i += 1
+
         else:
             result.append(right_half[j])
             j += 1
-
-        if i == len(left_half) or j == len(right_half):
-            result.extend(left_half[i:] or right_half[j:])
-            break
 
 
 def merge_sort(lst):
@@ -23,7 +20,8 @@ def merge_sort(lst):
         return lst
 
     else:
-        middle = len(lst) // 2
-        left = lst[:middle]
-        right = lst[middle:]
+        middle_index = len(lst) // 2
+        left = merge_sort(lst[:middle_index])
+        right = merge_sort(lst[middle_index:])
+
         return merge(left, right)

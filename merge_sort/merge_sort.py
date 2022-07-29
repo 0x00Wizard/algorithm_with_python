@@ -3,7 +3,7 @@ def merge(left_half, right_half):
         return left_half or right_half
 
     result = []
-    i, j = 0,0
+    i, j = 0, 0
 
     while True:
 
@@ -26,9 +26,12 @@ def merge_sort(lst):
         return lst
 
     else:
-        middle_index = len(lst)//2
+        middle_index = len(lst) // 2
 
         left = merge_sort(lst[:middle_index])
         right = merge_sort(lst[middle_index:])
 
         return merge(left, right)
+
+
+print(merge_sort([1, 3, 4, 2, 32, 1, 2, 34, 18, 4, 5, 9, 20]))
