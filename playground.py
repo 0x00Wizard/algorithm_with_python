@@ -14,6 +14,13 @@ def merge(left_half, right_half):
             result.append(right_half[j])
             j += 1
 
+        if i == len(left_half) or j == len(right_half):
+            # Remember
+            result.extend(left_half[i:] or right_half[j:])
+            break
+
+    return result
+
 
 def merge_sort(lst):
     if len(lst) == 0 or len(lst) == 1:
@@ -25,3 +32,5 @@ def merge_sort(lst):
         right = merge_sort(lst[middle_index:])
 
         return merge(left, right)
+
+# print(merge_sort([1, 3, 4, 2, 32, 1, 2, 34, 18, 4, 5, 9, 20]))
