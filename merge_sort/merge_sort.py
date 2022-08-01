@@ -1,5 +1,5 @@
 def merge_sort(lst):
-    # If the list is empty or it only contains one element
+    # If the list is empty, or it only contains one element
     if len(lst) == 0 or len(lst) == 1:
         return lst
     else:
@@ -33,7 +33,7 @@ def merge(left_half, right_half):
         if left_half[i] < right_half[j]:
             result.append(left_half[i])
             i += 1
-        # Else, if the element in the right half is smaller,
+        # Else, if the element ian the right half is smaller,
         # add that element to the list at the current index.
         else:
             result.append(right_half[j])
