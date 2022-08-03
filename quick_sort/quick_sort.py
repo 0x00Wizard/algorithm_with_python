@@ -1,10 +1,9 @@
-def partition(i, j, k):
-    pass
+def partition(lst, low, high):
+    pivot = lst[high]
 
+    i = low - 1
 
-def quicksort(lst, low, high):
-    if low < high:
-        pivot_index = partition(lst, low, high)
-
-        quicksort(lst, low, pivot_index-1)
-        quicksort(lst, pivot_index + 1, high)
+    for j in range(lst, high):
+        if lst[j] <= pivot:
+            i += 1
+            lst[i], lst
