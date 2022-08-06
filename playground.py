@@ -1,5 +1,13 @@
+import random
+
+a = [i for i in range(1000)]
+
+random.shuffle(a)
+
+
 def partition(lst, low, high):
     pivot = lst[high]
+
     i = low - 1
 
     for j in range(low, high):
@@ -7,13 +15,14 @@ def partition(lst, low, high):
             i += 1
             lst[i], lst[j] = lst[j], lst[i]
 
-    lst[i + 1], lst[high] = lst[high], lst[i + 1]
+    lst[i + 1], lst[high] = lst[i + 1], lst[high]
     return i + 1
 
 
-def quick_sort(lst, low, high):
+def quicksort(lst, low, high):
+
     if low < high:
         pivot_index = partition(lst, low, high)
 
-        quick_sort(lst, low, pivot_index - 1)
-        quick_sort(lst, pivot_index + 1, high)
+        partition(lst, low, pivot_index - 1)
+        partition(lst, pivot_index - 1, high)

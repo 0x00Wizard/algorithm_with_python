@@ -1,3 +1,12 @@
+import random
+
+a = [i for i in range(1000)]
+
+random.shuffle(a)
+
+print(a)
+
+
 def quicksort(lst, low, high):
     # If the interval [low, high] is valid
     if low < high:
@@ -27,3 +36,8 @@ def partition(lst, low, high):
 
     lst[i + 1], lst[high] = lst[high], lst[i + 1]
     return i + 1
+
+
+quicksort(a, 0, len(a) - 1)
+
+print(a)
