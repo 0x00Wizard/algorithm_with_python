@@ -2,6 +2,7 @@ import timeit
 
 NUM_REPETITIONS = 10000
 
+
 # Binary Search Algorithm Implementation
 
 def binary_search(data, item):
@@ -9,7 +10,7 @@ def binary_search(data, item):
     high = len(data) - 1
 
     while low <= high:
-        middle = (low + high)//2
+        middle = (low + high) // 2
         if data[middle] == item:
             return middle
         elif data[middle] > item:
@@ -18,10 +19,9 @@ def binary_search(data, item):
             low = middle + 1
     return -1
 
+
 # List
 a = [i for i in range(10000)]
-
-
 
 # First Test - Finding an element at the beginning of the list
 
@@ -36,9 +36,7 @@ print("\n==> First test of Binary Search: Beginning")
 time = timeit.timeit(test_code_1, number=NUM_REPETITIONS, globals=globals())
 
 print("Total time to find the element:", time)
-print("Average time per repetition:", time/NUM_REPETITIONS)
-
-
+print("Average time per repetition:", time / NUM_REPETITIONS)
 
 # Second Test - Finding an element in the middle of the list
 
@@ -53,9 +51,7 @@ print("\n==> Second test of Binary Search: Middle")
 time = timeit.timeit(test_code_2, number=NUM_REPETITIONS, globals=globals())
 
 print("Total time to find the element:", time)
-print("Average time per repetition:", time/NUM_REPETITIONS)
-
-
+print("Average time per repetition:", time / NUM_REPETITIONS)
 
 # Third Test - Finding an element at the end of the list
 
@@ -70,7 +66,4 @@ print("\n==> Third test of Binary Search: End")
 time = timeit.timeit(test_code_3, number=NUM_REPETITIONS, globals=globals())
 
 print("Total time to find the element:", time)
-print("Average time per repetition:", time/NUM_REPETITIONS)
-
-
-
+print("Average time per repetition:", time / NUM_REPETITIONS)
