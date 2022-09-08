@@ -1,11 +1,19 @@
-def linear_search(data, item):
-    for i in range(len(data)):
-        if data[i] == item:
-            return i
+def binary_search(data, item):
+    low = 0
+    high = len(data) - 1
 
-        return - 1
+    while low <= high:
+        middle = (low + high)//2
+
+        if data[middle] == item:
+            return middle
+
+        elif data[middle] > item:
+            high = middle - 1
+
+        else:
+            low = middle + 1
 
 
-a = [2, 1, 3, 45, 22, 11, 19]
 
-print(linear_search(a, 45))
+    return -1
