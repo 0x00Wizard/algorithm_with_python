@@ -1,19 +1,12 @@
-def binary_search(data, item):
-    low = 0
-    high = len(data) - 1
+def bubble_sort(lst):
+    n = len(lst)
 
-    while low <= high:
-        middle = (low + high)//2
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if lst[i] > lst[j + 1]:
+                lst[j], lst[j + 1] = lst[j + 1], lst[j]
+                swapped = True
 
-        if data[middle] == item:
-            return middle
-
-        elif data[middle] > item:
-            high = middle - 1
-
-        else:
-            low = middle + 1
-
-
-
-    return -1
+        if not swapped:
+            break
